@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -16,6 +18,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@eslint-react/eslint-plugin": "^1.48.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -25,7 +29,12 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "typescript": "~5.7.2",
     "vite": "^6.3.1"
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
   }
 }
