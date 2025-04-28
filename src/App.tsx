@@ -1,9 +1,17 @@
+import type { FunctionComponent, SVGProps } from 'react'
 import { useState } from 'react'
+import Icon1 from '~/assets/icon1.svg?react'
+import Icon2 from '~/assets/icon2.svg?react'
+
+import Icon3 from '~/assets/icon3.svg?react'
+import Icon4 from '~/assets/icon4.svg?react'
 import Footer from '~/components/Footer'
 import './App.css'
 
+type content = FunctionComponent<SVGProps<SVGSVGElement>>
 interface CompItem {
   title: string
+  Icon: content
 }
 
 export default function App() {
@@ -20,15 +28,19 @@ export default function App() {
   const iconComponents: CompItem[] = [
     {
       title: 'github',
+      Icon: Icon1,
     },
     {
       title: 'X',
+      Icon: Icon2,
     },
     {
       title: 'bilibili',
+      Icon: Icon3,
     },
     {
       title: 'youtube',
+      Icon: Icon4,
     },
   ]
 
@@ -51,7 +63,7 @@ export default function App() {
     window.open(url, '_blank')
   }
 
-  const imgList = Array.from({ length: 4 }, (_, idx) => {
+  const imgList = Array.from({ length: 5 }, (_, idx) => {
     return (
       <span key={`${idx}`} className={`circle circle${idx + 1}`}>
         {idx === 4 && <img className="avatar" src="/avatar.webp" alt="" />}
@@ -113,10 +125,10 @@ export default function App() {
             <div className="bottom">
               <div className="social-buttons-container">
                 {
-                  iconComponents.map(({ title }, idx) => {
+                  iconComponents.map(({ title, Icon }, idx) => {
                     return (
                       <button key={title} onClick={() => onNavigate(Number(idx))}>
-                        <img src={`./assets/icon${idx + 1}.svg`} alt="" />
+                        <Icon />
                       </button>
                     )
                   })
