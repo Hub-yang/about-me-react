@@ -30,7 +30,7 @@ body {
 }
 
 body .content {
-  padding: 20px;
+  /* padding: 20px; */
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(10px);
@@ -52,6 +52,12 @@ body .content {
     #46eefa,
     #5ffbf1
   );
+}
+
+body .base_bg {
+  position: absoulte;
+  top: 0;
+  left: 0;
 }
 
 body .background {
@@ -84,6 +90,7 @@ body .background {
   width: 450px;
   height: 464px;
   perspective: 1000px;
+  z-index: 999;
 }
 
 .info_card:hover .card {

@@ -6,6 +6,7 @@ import Icon2 from '~/assets/icon2.svg?react'
 import Icon3 from '~/assets/icon3.svg?react'
 import Icon4 from '~/assets/icon4.svg?react'
 import Footer from '~/components/Footer'
+import LetterGlitch from '~/components/LetterGlitch'
 import './App.css'
 
 type content = FunctionComponent<SVGProps<SVGSVGElement>>
@@ -19,7 +20,7 @@ export default function App() {
   const userInfo = {
     name: 'Hubery Yang',
     desc: '👋 Hi, 我是 "Hubery Yang"',
-    post: '👨‍💻 前端开发者 | Vue & Nuxt & Js & Python',
+    post: '👨‍💻 前端开发者 | Vue & Nuxt & React & Python',
     hobby: '🚀 脚本编写, 网站开发',
     script: '💓 拍摄 | 剪辑 | 阅读 | 羽毛球',
     mail: '18830279823@163.com',
@@ -127,7 +128,7 @@ export default function App() {
                 {
                   iconComponents.map(({ title, Icon }, idx) => {
                     return (
-                      <button key={title} onClick={() => onNavigate(Number(idx))}>
+                      <button type="button" key={title} onClick={() => onNavigate(Number(idx))}>
                         <Icon />
                       </button>
                     )
@@ -137,8 +138,15 @@ export default function App() {
             </div>
           </div>
         </div>
+        <div className="base_bg">
+          <LetterGlitch
+            glitchSpeed={100}
+            centerVignette
+            outerVignette
+            smooth={true}
+          />
+        </div>
       </div>
-
       <Footer />
     </>
   )
