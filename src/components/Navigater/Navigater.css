@@ -1,0 +1,51 @@
+:root {
+  --react-color: #087ea4;
+}
+
+.navigater_container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  font-weight: 600;
+  font-size: 18px;
+
+  .item {
+    margin-left: 12px;
+  }
+
+  .active {
+    margin-left: 8px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    background: var(--react-color);
+    text-align: center;
+    color: black;
+    transition: all ease 0.3s;
+    position: relative;
+  }
+
+  .active .line {
+    position: absolute;
+    width: 0;
+    margin: 0 auto;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-25px);
+    height: 2px;
+    background: var(--react-color);
+    transition: width ease 0.3s;
+  }
+
+  .active:hover {
+    transition: all ease 0.3s;
+    color: var(--react-color);
+    background: white;
+  }
+  .active:hover .line {
+    transition: width ease 0.3s;
+    width: 50px;
+  }
+}

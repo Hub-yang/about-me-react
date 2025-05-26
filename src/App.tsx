@@ -7,6 +7,7 @@ import Icon3 from '~/assets/icon3.svg?react'
 import Icon4 from '~/assets/icon4.svg?react'
 import Footer from '~/components/Footer'
 import LetterGlitch from '~/components/LetterGlitch'
+import Navigater from '~/components/Navigater/Navigater'
 import './App.css'
 
 type content = FunctionComponent<SVGProps<SVGSVGElement>>
@@ -91,6 +92,7 @@ export default function App() {
       <div className="tootip" style={tootipShow ? { top: '10px' } : { top: '-50px' }}>
         拷贝成功
       </div>
+      <Navigater />
       <div className="content">
         <div className="info_card">
           <div className="card">
