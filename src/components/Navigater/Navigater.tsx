@@ -4,26 +4,44 @@ export default function Navigater() {
   const links = [
     {
       title: 'React',
-      bgColor: '#087ea4',
+      url: '',
     },
     {
       title: 'to Vue',
-      bgColor: '#42b883',
+      url: 'https://huberyyang.site:85/',
     },
     {
       title: 'to Html',
-      bgColor: '#dd4b25',
+      url: 'https://huberyyang.site/',
     },
   ]
+  function getItemClass(key: string): string {
+    switch (key) {
+      case 'React':
+        return 'active'
+      case 'to Vue':
+        return 'vue item'
+      case 'to Html':
+        return 'html item'
+      default:
+        return ''
+    }
+  }
+
+  function onNavigate(url: string) {
+    if (!url)
+      return false
+    window.open(url, '_self')
+  }
   return (
     <>
       <div className="navigater_container">
         <span>Build with</span>
         {
-          links.map(({ title, bgColor }) => (
-            <span key={title} className={title === 'React' ? 'active' : 'item'}>
+          links.map(({ title, url }) => (
+            <span key={title} className={getItemClass(title)} onClick={() => onNavigate(url)}>
               {title}
-              <span className="line" style={{ background: bgColor }} />
+              <span className="line" />
             </span>
           ))
         }

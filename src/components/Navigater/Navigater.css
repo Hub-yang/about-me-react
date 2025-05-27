@@ -1,5 +1,7 @@
 :root {
   --react-color: #087ea4;
+  --vue-color: #42b883;
+  --html-color: #dd4b25;
 }
 
 .navigater_container {
@@ -13,7 +15,18 @@
   font-size: 18px;
 
   .item {
+    color: #fff;
     margin-left: 12px;
+    transition: color ease 0.3s;
+    cursor: pointer;
+  }
+  .vue:hover {
+    transition: color ease 0.3s;
+    color: var(--vue-color);
+  }
+  .html:hover {
+    transition: color ease 0.3s;
+    color: var(--html-color);
   }
 
   .active {
