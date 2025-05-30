@@ -22,7 +22,7 @@ export default function App() {
     name: 'Hubery Yang',
     desc: '👋 Hi, 我是 "Hubery Yang"',
     post: '👨‍💻 前端开发者 | Vue & Nuxt & React & Python',
-    hobby: '🚀 脚本编写, 网站开发',
+    hobby: '🚀 脚本编写, 网页设计',
     script: '💓 拍摄 | 剪辑 | 阅读 | 羽毛球',
     mail: '18830279823@163.com',
     phone: '15932130680',
