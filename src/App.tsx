@@ -2,7 +2,6 @@ import type { FunctionComponent, SVGProps } from 'react'
 import { useState } from 'react'
 import Icon1 from '~/assets/icon1.svg?react'
 import Icon2 from '~/assets/icon2.svg?react'
-
 import Icon3 from '~/assets/icon3.svg?react'
 import Icon4 from '~/assets/icon4.svg?react'
 import Footer from '~/components/Footer'
@@ -89,7 +88,7 @@ export default function App() {
   }
   return (
     <>
-      <div className="tootip" style={tootipShow ? { top: '10px' } : { top: '-50px' }}>
+      <div className="tootip" style={{ top: tootipShow ? '10px' : '-50px' }}>
         拷贝成功
       </div>
       <Navigater />
