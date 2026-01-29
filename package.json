@@ -4,16 +4,27 @@
   "version": "v1.0.0",
   "private": true,
   "packageManager": "pnpm@10.28.2",
+  "description": "about-me 个人主页 react版本",
+  "author": "Hubery Yang",
   "license": "MIT",
+  "homepage": "https://github.com/Hub-yang/about-me-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hub-yang/about-me-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hub-yang/about-me-react/issues"
+  },
   "scripts": {
     "dev": "vite --open",
     "build": "tsc -b && vite build",
+    "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "preview": "vite preview",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
-    "taze": "npx taze major -r"
+    "taze": "npx taze major -r",
+    "license:mit": "npx license MIT"
   },
   "dependencies": {
     "react": "^19.0.4",
