@@ -1,7 +1,7 @@
 {
   "name": "about-me-react",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2-beta.1",
   "private": true,
   "packageManager": "pnpm@10.28.2",
   "description": "about-me 个人主页 react版本",
@@ -24,7 +24,8 @@
     "prepare": "husky",
     "commitlint": "commitlint --edit",
     "taze": "npx taze major -r",
-    "license:mit": "npx license MIT"
+    "license:mit": "npx license MIT",
+    "release": "bumpp"
   },
   "dependencies": {
     "react": "^19.0.4",
