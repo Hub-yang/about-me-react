@@ -1,7 +1,7 @@
 {
   "name": "about-me-react",
   "type": "module",
-  "version": "1.0.2-beta.1",
+  "version": "1.0.2",
   "private": true,
   "packageManager": "pnpm@10.28.2",
   "description": "about-me 个人主页 react版本",
