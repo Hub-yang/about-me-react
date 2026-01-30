@@ -24,7 +24,7 @@ export default function App() {
     hobby: '🚀 脚本编写, 网页设计',
     script: '💓 拍摄 | 剪辑 | 阅读 | 羽毛球',
     mail: '18830279823@163.com',
-    phone: '15932130680',
+    phone: '17274892516',
   }
   const iconComponents: CompItem[] = [
     {
