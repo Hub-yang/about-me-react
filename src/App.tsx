@@ -79,7 +79,7 @@ export default function App() {
       await navigator.clipboard.writeText((userInfo as AnyKey)[type])
       setTootipShow(true)
       clearTimeout(timer)
-      timer = setTimeout(() => setTootipShow(false), 2000)
+      timer = setTimeout(setTootipShow, 2000, false)
     }
     // eslint-disable-next-line unused-imports/no-unused-vars
     catch (_err) {
