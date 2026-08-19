@@ -144,12 +144,12 @@ function LetterGlitch({
   const initializeLetters = (columns: number, rows: number) => {
     grid.current = { columns, rows }
     const totalLetters = columns * rows
-    letters.current = Array.from({ length: totalLetters }).fill({
+    letters.current = Array.from({ length: totalLetters }, () => ({
       char: getRandomChar(),
       color: getRandomColor(),
       targetColor: getRandomColor(),
       colorProgress: 1,
-    }) as any
+    })) as any
   }
 
   const drawLetters = () => {
