@@ -144,12 +144,12 @@ function LetterGlitch({
   const initializeLetters = (columns: number, rows: number) => {
     grid.current = { columns, rows }
     const totalLetters = columns * rows
-    letters.current = Array.from({ length: totalLetters }, () => ({
+    letters.current = Array.from({ length: totalLetters }).fill({
       char: getRandomChar(),
       color: getRandomColor(),
       targetColor: getRandomColor(),
       colorProgress: 1,
-    }))
+    }) as any
   }
 
   const drawLetters = () => {
@@ -269,7 +269,7 @@ function LetterGlitch({
     resizeCanvas()
     animate()
 
-    let resizeTimeout: NodeJS.Timeout
+    let resizeTimeout: any
 
     const handleResize = () => {
       clearTimeout(resizeTimeout)
@@ -286,7 +286,6 @@ function LetterGlitch({
       cancelAnimationFrame(animationRef.current!)
       window.removeEventListener('resize', handleResize)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [glitchSpeed, smooth])
 
   const containerStyle = {
